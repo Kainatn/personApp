@@ -7,7 +7,7 @@ import Persons from  './components/Persons'
 
 function App() {
   return (
-  <Container style={{background:'brown',}}>
+  <Container>
      <h2>Person App</h2>
      <Persons/>
  

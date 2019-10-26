@@ -2,20 +2,25 @@ import React from 'react';
 import PerosnInfo from './PerosnInfo';
 import PerosnEdit from './PerosnEdit';
 import PropType from 'prop-types';
+import { Card, Button } from 'react-bootstrap';
 
 const Perosn = (props) => {
-    
+
 
     return (
-        <div style={{ background: 'blue', padding: '1em', margin: '1em' }}>
-            Person here
-            {props.isEditMode ?
-                <PerosnEdit /> : <PerosnInfo />}
-        </div>
+        <>
+
+
+            <Card style={{ width: '18rem' ,margin:'1em',textAlign:'center'}}  >
+                {props.person.isEditMode ?
+                    <PerosnEdit person={props.person} /> : <PerosnInfo person={props.person} />}
+            </Card>
+
+        </>
     )
 }
 
 export default Perosn;
 Perosn.propTypes = {
-    isEditMode: PropType.bool
+    person: PropType.object
 }
