@@ -7,7 +7,7 @@ import Persons from  './components/Persons'
 
 function App() {
   return (
-  <Container>
+  <Container className="justify-content-center">
      <h2>Person App</h2>
      <Persons/>
  
