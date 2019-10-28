@@ -1,0 +1,10 @@
+.persons_list{
+  display: flex;
+  flex-direction: column;
+justify-content: center; 
+background: rgba(211, 211, 211, 0.219);
+ padding: 1em;
+  margin: 1em;
+  align-items: center;
+
+}

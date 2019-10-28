@@ -1,4 +1,9 @@
-.App {
-  text-align: center;
-}
 
+.container{
+  text-align: center;
+  background: rgba(137, 43, 226, 0.041);
+}
+h2{
+  font-family: cursive;
+  color: black;
+}
