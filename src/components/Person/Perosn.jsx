@@ -13,9 +13,9 @@ const Perosn = (props) => {
 
             <Card className="card"  >
                 {props.person.isEditMode ?
-                    <PerosnEdit person={props.person} /> :
+                    <PerosnEdit person={props.person} CloseClick={props.disableEdit} /> :
                     <PerosnInfo person={props.person} 
-                    enableEditButton={props.enabledEditButton}
+                    enableEditButton={props.enabledEditButton} personDelete={props.ClickDelete}
                     />}
             </Card>
 
@@ -26,5 +26,8 @@ const Perosn = (props) => {
 export default Perosn;
 Perosn.propTypes = {
     person: PropType.object,
-     enabledEditButton:PropType.func
+     enabledEditButton:PropType.func,
+     disableEdit:PropType.func,
+     ClickDelete:PropType.func
+
 }

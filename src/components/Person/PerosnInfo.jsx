@@ -16,7 +16,7 @@ const PerosnInfo = (props) => {
                 <Button variant="light"><FontAwesomeIcon className="text-primary" icon={faEdit} 
                 onClick={props.enableEditButton} 
                 /></Button>
-                <Button variant="light"><FontAwesomeIcon className="text-danger" icon={faTrash} /></Button>
+                <Button variant="light"><FontAwesomeIcon className="text-danger" icon={faTrash} onClick={props.personDelete} /></Button>
             </ButtonGroup>
         </Card.Body>
 
@@ -26,6 +26,6 @@ const PerosnInfo = (props) => {
 export default PerosnInfo;
 PerosnInfo.propTypes = {
     person: PropType.object,
-    enableEditButton:PropType.func
-    // enableEditButton.
+    enableEditButton:PropType.func,
+    personDelete:PropType.func
 }

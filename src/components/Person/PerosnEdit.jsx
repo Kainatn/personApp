@@ -2,7 +2,8 @@ import React from 'react';
 import PerosnInfo from './PerosnInfo';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Card, Button, ButtonGroup } from 'react-bootstrap';
-import './personEdit.css'
+import PropType from 'prop-types';
+import './personEdit.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const PerosnEdit = (props) => {
@@ -16,13 +17,15 @@ const PerosnEdit = (props) => {
             </Card.Text>
             <ButtonGroup aria-label="Basic example">
                 <Button variant="light"><FontAwesomeIcon className="text-primary" icon={faCheck} /></Button>
-                <Button variant="light"><FontAwesomeIcon className="text-danger" icon={faTimes} /></Button>
+                <Button variant="light"><FontAwesomeIcon className="text-danger" icon={faTimes}  onClick={props.CloseClick}/></Button>
             </ButtonGroup>
         </Card.Body>
     );
 }
 
 export default PerosnEdit;
-// PerosnEdit.propTypes = {
-//     person: PropType.object
-// }
+PerosnEdit.propTypes = {
+    person: PropType.object,
+    CloseClick:PropType.func,
+  
+}
